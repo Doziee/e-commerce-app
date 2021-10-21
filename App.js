@@ -10,7 +10,7 @@ export default function App() {
       <Text>Cia</Text>
       <Text>Sly</Text>
       <Text>Godson</Text>
-      <Text>Hadi</Text>
+      <Text>Aziz</Text>
       <StatusBar style="auto" />
     </View>
   );
