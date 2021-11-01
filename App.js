@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {}
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 
@@ -11,18 +12,18 @@ export default function App() {
 
 
   return (
-    <View style={styles.container}>
-      <Text>Cedric diverse</Text>
-      <Text>Emma</Text>
-      <Text>Cia</Text>
-      <Text>Sly</Text>
-      <Text>Godson</Text>
-      <Text>Aziz</Text>
-      <StatusBar style="auto" />
+    <View>
+        <NavigationContainer>
+          <MainNavigator.Navigator>
+            <MainNavigator.Screen name="Login" component = {Login} />
+            <MainNavigator.Screen name="Home" component = {Home} />
+          </MainNavigator.Navigator>
+        </NavigationContainer>
     </View>
     
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
