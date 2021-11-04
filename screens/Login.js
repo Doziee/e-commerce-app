@@ -1,5 +1,5 @@
 //please run code on web, not on a simulator or Expo Go.
-// I had issues while configuring it for those devices.
+// I was having issues with my gesture-handler, so i had to use web.
 
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from "react-native";
@@ -27,6 +27,9 @@ export default function Login({navigation}){
                 BOOK ARCHIVE
             </Text>
         <TouchableOpacity
+        onPress={() => {
+            navigation.navigate("Home")
+        }}
            style={{ 
                backgroundColor : "black",
                 padding:10,
