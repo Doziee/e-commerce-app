@@ -1,3 +1,6 @@
+//please run code on web, not on a simulator or Expo Go.
+// I had issues while configuring it for those devices.
+
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
@@ -23,14 +26,13 @@ export default function Cart({navigation}){
                 color: 'grey',
                 paddingLeft:150,
                 
-            }}>(3 items)</Text>
+            }}>(3 books)</Text>
 
             
              <View
              style={{
                  paddingBottom:60,
                  flexDirection:"row",
-                 //backgroundColor: "#eee",
                  height:100,
                  elevation:15,
                  borderRadius:10,
@@ -47,17 +49,12 @@ export default function Cart({navigation}){
            backgroundColor: "#fff",
            height:90,
            width:90,
-           //elevation:2,
            borderRadius:30,
-           //borderStyle:"solid",
            borderWidth: 1,
-           //padding:15,
-           //marginRight:30,
            marginRight:12,
-           //marginBottom:5
       }}>
           <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
-          name="heart-circle" size={24} color="black" />
+          name="heart-circle" size={24} color="brown" />
         <Image
          style={{
             
@@ -67,7 +64,7 @@ export default function Cart({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/bike3.jpg')} 
+        source={require('./images/The girl in red.jpg')} 
         />
         </TouchableOpacity>
 
@@ -80,17 +77,16 @@ export default function Cart({navigation}){
             <Text style={{
                 marginLeft:10, 
                 marginBottom:15,
-                fontWeight:"bold"
-            }}>Narco Bike 
+                fontWeight:"bold",
+                color: "lightblue"
+            }}>The Girl In Red
 
             </Text>
 
             <EvilIcons style={{
-                 marginLeft:110,
-                 //marginRight:90,
-                 //marginTop:40
+                 marginLeft:65,
             }}
-        name="trash" size={28} color="orange"  />
+        name="trash" size={28} color="red"  />
 
             </View >
             <Text style={{
@@ -99,20 +95,19 @@ export default function Cart({navigation}){
                 fontWeight:"bold",
                 color:"grey"
             }}>
-                Montain bike
+               Genre: Romance
             </Text>
             <View style= {{flexDirection:"row"}}>
             <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold",
             marginLeft:10, 
-            //marginBottom:10,
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 2,900.00</Text></Text>
+        }}> 500.00</Text></Text>
 
         <AntDesign 
 
@@ -121,7 +116,7 @@ export default function Cart({navigation}){
             paddingBottom:5
         }}
     
-        name="minuscircle" size={28} color="black" />
+        name="minuscircle" size={28} color="red" />
 
         <Text
          style={{
@@ -129,7 +124,7 @@ export default function Cart({navigation}){
             //marginLeft:20
         }}
         >   1   </Text>
-        <AntDesign name="pluscircle" size={28} color="orange" />
+        <AntDesign name="pluscircle" size={28} color="green" />
         </View>
 
         </View>
@@ -145,19 +140,14 @@ export default function Cart({navigation}){
 
             }}>
              <TouchableOpacity style={{
-          //marginTop:5,
            alignItems:"center",
            backgroundColor: "#fff",
            height:100,
            width:95,
-           //elevation:2,
            borderRadius:30,
-           //borderStyle:"solid",
            borderWidth: 1,
            paddingBottom:70,
-           //marginRight:30,
            marginRight:12,
-           //marginBottom:5
       }}>
           <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
           name="heart-circle" size={24} color="black" />
@@ -171,7 +161,7 @@ export default function Cart({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/Bbike4.jpg')} 
+        source={require('./images/no place like here.jpg')} 
         />
         </TouchableOpacity>
 
@@ -184,17 +174,16 @@ export default function Cart({navigation}){
             <Text style={{
                 marginLeft:10, 
                 marginBottom:15,
-                fontWeight:"bold"
-            }}>Schiwin Bike 
+                fontWeight:"bold",
+                color: "lightblue"
+            }}>No Place Like Here
 
             </Text>
 
             <EvilIcons style={{
-                 marginLeft:90,
-                 //marginRight:90,
-                 //marginTop:40
+                 marginLeft:40,
             }}
-        name="trash" size={28} color="orange"  />
+        name="trash" size={28} color="red"  />
 
             </View >
             <Text style={{
@@ -203,20 +192,19 @@ export default function Cart({navigation}){
                 fontWeight:"bold",
                 color:"grey"
             }}>
-                Road bike
+                Genre: Science
             </Text>
             <View style= {{flexDirection:"row"}}>
             <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold",
             marginLeft:10, 
-            //marginBottom:10,
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 4,500.00</Text></Text>
+        }}> 350.00</Text></Text>
 
         <AntDesign 
 
@@ -225,15 +213,14 @@ export default function Cart({navigation}){
             paddingBottom:5
         }}
     
-        name="minuscircle" size={28} color="black" />
+        name="minuscircle" size={28} color="red" />
 
         <Text
          style={{
              fontWeight:"bold",
-            //marginLeft:20
         }}
         >  1  </Text>
-        <AntDesign name="pluscircle" size={28} color="orange" />
+        <AntDesign name="pluscircle" size={28} color="green" />
         </View>
 
         </View>
@@ -243,7 +230,6 @@ export default function Cart({navigation}){
              style={{
                  
                  flexDirection:"row",
-                 //paddingBottom:10,
                  marginHorizontal: 20,
                  paddingHorizontal:10,
                  
@@ -257,14 +243,9 @@ export default function Cart({navigation}){
            backgroundColor: "#fff",
            height:90,
            width:90,
-           //elevation:2,
            borderRadius:30,
-           //borderStyle:"solid",
            borderWidth: 1,
-           //padding:15,
-           //marginRight:30,
            marginRight:12,
-           //marginBottom:5
       }}>
           <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
           name="heart-circle" size={24} color="black" />
@@ -277,7 +258,7 @@ export default function Cart({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/bike2.jpg')} 
+        source={require('./images/Memory.jpg')} 
         />
         </TouchableOpacity>
 
@@ -290,17 +271,16 @@ export default function Cart({navigation}){
             <Text style={{
                 marginLeft:10, 
                 marginBottom:15,
-                fontWeight:"bold"
-            }}>Pinarello Bike 
+                fontWeight:"bold",
+                color: "lightblue"
+            }}>Memory 
 
             </Text>
 
             <EvilIcons style={{
-                 marginLeft:90,
-                 //marginRight:90,
-                 //marginTop:40
+                 marginLeft:110,
             }}
-        name="trash" size={28} color="orange"  />
+        name="trash" size={28} color="red"  />
 
             </View >
             <Text style={{
@@ -309,20 +289,19 @@ export default function Cart({navigation}){
                 fontWeight:"bold",
                 color:"grey"
             }}>
-            Urbain 
+            Genre: Life
             </Text>
             <View style= {{flexDirection:"row"}}>
             <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold",
             marginLeft:10, 
-            //marginBottom:10,
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 1,700.00</Text></Text>
+        }}> 700.00</Text></Text>
 
         <AntDesign 
 
@@ -331,15 +310,14 @@ export default function Cart({navigation}){
             paddingBottom:5
         }}
     
-        name="minuscircle" size={28} color="black" />
+        name="minuscircle" size={28} color="red" />
 
         <Text
          style={{
              fontWeight:"bold",
-            //marginLeft:20
         }}
         >   1   </Text>
-        <AntDesign name="pluscircle" size={28} color="orange" />
+        <AntDesign name="pluscircle" size={28} color="green" />
         </View>
 
         </View>
@@ -349,7 +327,6 @@ export default function Cart({navigation}){
                  <View
                  style={{
                     marginTop:25,
-                    flexDirection: "colomn",
                     backgroundColor: "#eee",
                     height:150,
                     width: "100%",
@@ -370,37 +347,37 @@ export default function Cart({navigation}){
 
 <Text
                      style={{ 
-                        color:"darkgrey",
+                        color:"grey",
                         paddingTop:15,
                         paddingLeft:10,
                            }}
                      
                      > Subtotal</Text>
                      <Text style={{ 
-                       color:"orange",
+                       color:"red",
                        fontWeight:"bold",
-                       paddingLeft:170,
+                       paddingLeft:163,
                        paddingTop:15,
                           }}
                     >$<Text style={{
                        color:"black",
                          fontWeight: "bold",
                          
-                     }}> 9,100.00</Text></Text>
+                     }}> 1,550.00</Text></Text>
                      
                      </View>
 
                      <View style={{flexDirection:"row"}}>
                      <Text
                      style={{ 
-                        color:"darkgrey",
+                        color:"grey",
                         paddingTop:15,
                         paddingLeft:10,
                            }}
                      
                      > Shipping Fee</Text>
                      <Text style={{ 
-                       color:"orange",
+                       color:"red",
                        fontWeight:"bold",
                        paddingLeft:135,
                        paddingTop:15,
@@ -409,14 +386,14 @@ export default function Cart({navigation}){
                        color:"black",
                          fontWeight: "bold",
                          
-                     }}> 1,000.00</Text></Text>
+                     }}> 34.00</Text></Text>
                      
                      </View>
                      
                      <Text
 
                      style={{
-                         color:"darkgrey",
+                         color:"grey",
                      }}
                      
                      > ------------------------------------------------</Text>
@@ -431,16 +408,16 @@ export default function Cart({navigation}){
                      
                      > Total</Text>
                      <Text style={{ 
-                       color:"orange",
+                       color:"red",
                        fontWeight:"bold",
-                       paddingLeft:190,
+                       paddingLeft:183,
                        paddingTop:15,
                           }}
                     >$<Text style={{
                        color:"black",
                          fontWeight: "bold",
                          
-                     }}> 10,100.00</Text></Text>
+                     }}> 1,584.00</Text></Text>
                      
                      </View>
 
@@ -450,7 +427,7 @@ export default function Cart({navigation}){
                  <View
                  style={{
                     marginTop:30,
-                    backgroundColor: "orange",
+                    backgroundColor: "green",
                     height:50,
                     width: "100%",
                     borderRadius:30,
@@ -495,7 +472,7 @@ export default function Cart({navigation}){
                 paddingTop:15, 
 
             }}
-            name="home" size={26} color="darkgrey" />
+            name="home" size={26} color="brown" />
             </TouchableOpacity>
               
               
@@ -507,7 +484,7 @@ export default function Cart({navigation}){
                 
             }}
         
-             name="shopping-bag" size={24} color="orange" />
+             name="shopping-bag" size={24} color="brown" />
              <View
         style={{
             justifyContent:"center",
@@ -525,7 +502,7 @@ export default function Cart({navigation}){
                     
                 }}
         
-        name="md-mic-circle-sharp" size={50} color="black" />
+        name="md-mic-circle-sharp" size={50} color="red" />
         </View>
 
             

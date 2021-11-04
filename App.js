@@ -1,3 +1,6 @@
+//please run code on web, not on a simulator or Expo Go.
+// I had issues while configuring it for those devices.
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -36,3 +39,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+

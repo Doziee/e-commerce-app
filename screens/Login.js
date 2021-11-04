@@ -1,3 +1,6 @@
+//please run code on web, not on a simulator or Expo Go.
+// I had issues while configuring it for those devices.
+
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from "react-native";
 import{MaterialCommunityIcons} from '@expo/vector-icons';
@@ -16,16 +19,16 @@ export default function Login({navigation}){
             marginTop:70,
             transform:[{rotate:"295deg"}]
         }}
-        source={require('./images/sun.png')} 
+        source={require('./images/Login books.jpeg')} 
         />
         
-           <Text style={{ colo:"rgba(0,0,0,0.6)", fontSize:"24"}}>Welcome to</Text> 
-           <Text style={{ Color: "black", fontSize:"30", fontWeight: " 600", fontWeight: "bol"}}>
-                Power Bike Shop
+           <Text style={{ color:"rgba(0,0,0,0.6)", fontSize:"24"}}>Welcome to</Text> 
+           <Text style={{ Color: "white", fontSize:"30", fontWeight: " 600", fontWeight: "bold"}}>
+                BOOK ARCHIVE
             </Text>
         <TouchableOpacity
            style={{ 
-               backgroundColor : "#e3e3e3",
+               backgroundColor : "black",
                 padding:10,
                 flexDirection:"row",
                  paddingHorizontal:60,
@@ -33,8 +36,8 @@ export default function Login({navigation}){
                 marginTop:20 
                 }}
         >
-            <AntDesign name="google" size={24} color="orange" />
-            <Text style={{ fontSize:17, marginLeft: 10}}>Login with Gmail</Text>
+            <AntDesign name="google" size={24} color="blue" />
+            <Text style={{ fontSize:17, marginLeft: 10, color: "white" }}>Login with Gmail</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -59,7 +62,7 @@ export default function Login({navigation}){
 
         <TouchableOpacity>
         <Text style={{ fontSize:10, color:"grey",  paddingTop:10, fontWeight:"500" }}>Not a member? {" "}
-             <Text style={{ color : "orange", fontWeight:"bold"}}>SinUp</Text>
+             <Text style={{ color : "red", fontWeight:"bold"}}>SignUp</Text>
         </Text> 
         </TouchableOpacity>
         

@@ -1,3 +1,6 @@
+//please run code on web, not on a simulator or Expo Go.
+// I had issues while configuring it for those devices.
+
 import React , { useState }from 'react';
 import {View, Text ,TouchableOpacity, Image, ScrollView} from "react-native";
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
@@ -12,6 +15,7 @@ export default function Home({navigation}){
         backgroundColor: "white",
         flex:1, 
         
+       //paddingHorizontal: 20,
         
     }}
     >
@@ -25,18 +29,18 @@ export default function Home({navigation}){
         }}>
           
         <Ionicons name="ios-menu-outline" size={24} color="black" />
-        <FontAwesome name="motorcycle" size={24} color="black" />
+        <FontAwesome name="book" size={24} color="brown" />
         <View style= {{flexDirection:"row"}}>
         <Ionicons name="search" size={24} color="black" />
         <Ionicons name="notifications-outline" size={24} color="black" />
         </View>
         </View>
 
-        <Text style={{ fontSize:15, color:"grey",  paddingTop:15, fontWeight:"500", paddingLeft:15}}>The World's {" "}
-             <Text style={{ color : "orange", fontWeight:"bold"}}>Best Bike</Text>
+        <Text style={{ fontSize:15, color:"blue",  paddingTop:15, fontWeight:"500", paddingLeft:15}}>The World's {" "}
+             <Text style={{ color : "red", fontWeight:"bold"}}>Best Book Collection</Text>
         </Text>
 
-        <Text style={{paddingTop:15, fontWeight:"bold", paddingLeft:25}}>Categories</Text>
+        <Text style={{paddingTop:15, fontWeight:"bold", paddingLeft:25, color: "brown"}}>Genres</Text>
         
         <View style= {{flexDirection:"row"}}>
             
@@ -52,7 +56,7 @@ export default function Home({navigation}){
              marginLeft:20,
              }}
         >
-            <Text style={{ color: "orange" , alignItems:"center", }}>All</Text>
+            <Text style={{ color: "orange" , alignItems:"center",fontWeight:"bold" }}>All</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -64,7 +68,7 @@ export default function Home({navigation}){
                  marginTop:20 
                  }}
         >
-            <Text style={{alignItems:"center"}}>RoadBike</Text>
+            <Text style={{alignItems:"center", color: "red"}}>Romance</Text>
         </TouchableOpacity>
         <TouchableOpacity
            style={{ 
@@ -75,7 +79,7 @@ export default function Home({navigation}){
                 marginTop:20 
                 }}
         >
-     <Text style={{ alignItems:"center" }}>Mountain</Text>
+     <Text style={{ alignItems:"center", color: "red" }}>Science</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -87,7 +91,7 @@ export default function Home({navigation}){
                 marginTop:20 
                 }}
         >
-     <Text style={{ alignItems:"center" }}>Urbain</Text>
+     <Text style={{ alignItems:"center", color: "red" }}>Life</Text>
         </TouchableOpacity>
 
         </View>
@@ -111,7 +115,7 @@ export default function Home({navigation}){
            marginBottom:5
       }}>
           <Ionicons style={{alignSelf:"flex-end", marginBottom:5}}
-          name="heart-circle" size={24} color="orange" />
+          name="heart-circle" size={24} color="brown" />
         <Image
          style={{
             marginTop:1,
@@ -121,21 +125,21 @@ export default function Home({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/Bike.jpg')} 
+        source={require('./images/The girl in red.jpg')} 
         />
         <Text style={{ 
 
-            color: 'lightgrey',
+            color: 'lightblue',
         }}>
-        Pinarello Bike</Text>
+        The Girl In Red</Text>
         <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 1,700.00</Text></Text>
+        }}> 500.00</Text></Text>
 
         </TouchableOpacity>
 
@@ -165,21 +169,21 @@ export default function Home({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/bike2.jpg')} 
+        source={require('./images/Sing to it.jpg')} 
         />
         <Text style={{ 
             
-            color: 'lightgrey',
+            color: 'lightblue',
         }}>
-        Brompton Bike</Text>
+        Sing To It</Text>
         <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 2,800.00</Text></Text>
+        }}> 450.00</Text></Text>
 
         </TouchableOpacity>
         </View>
@@ -211,21 +215,21 @@ export default function Home({navigation}){
             
            
         }}
-        source={require('./images/Bbike4.jpg')} 
+        source={require('./images/no place like here.jpg')} 
         />
         <Text style={{ 
 
-            color: 'lightgrey',
+            color: 'lightblue',
         }}>
-         Schwinn Bike</Text>
+         No Place Like Here</Text>
         <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 4,500.00</Text></Text>
+        }}> 350.00</Text></Text>
 
         </TouchableOpacity>
 
@@ -255,21 +259,21 @@ export default function Home({navigation}){
             marginBottom: 25,
            
         }}
-        source={require('./images/bike3.jpg')} 
+        source={require('./images/Memory.jpg')} 
         />
         <Text style={{ 
             
-            color: 'lightgrey',
+            color: 'lightblue',
         }}>
-        Narco Bike</Text>
+        Memory</Text>
         <Text style={{ 
-            color:"orange",
+            color:"red",
             fontWeight:"bold"
         }}
         >$<Text style={{
             color:"black",
             fontWeight: "bold"
-        }}> 2,900.00</Text></Text>
+        }}> 700.00</Text></Text>
 
         </TouchableOpacity>
         </View>
@@ -293,7 +297,7 @@ export default function Home({navigation}){
                 paddingTop:15, 
 
             }}
-            name="home" size={26} color="orange" />
+            name="home" size={26} color="brown" />
 
 
               
@@ -311,7 +315,7 @@ export default function Home({navigation}){
                 
             }}
         
-             name="shopping-bag" size={24} color="darkgrey" /></TouchableOpacity>
+             name="shopping-cart" size={24} color="brown" /></TouchableOpacity>
              <View
         style={{
             justifyContent:"center",
@@ -329,7 +333,7 @@ export default function Home({navigation}){
                     
                 }}
         
-        name="md-mic-circle-sharp" size={50} color="black" />
+        name="md-mic-circle-sharp" size={50} color="red" />
         </View>
 
             
