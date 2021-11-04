@@ -1,6 +1,3 @@
-//please run code on web, not on a simulator or Expo Go.
-// I was having issues with my gesture-handler, so i had to use web.
-
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';

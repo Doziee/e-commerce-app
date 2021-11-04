@@ -1,6 +1,3 @@
-//please run code on web, not on a simulator or Expo Go.
-// I was having issues with my gesture-handler, so i had to use web.
-
 import React , { useState }from 'react';
 import {View, Text ,TouchableOpacity, Image, ScrollView} from "react-native";
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
