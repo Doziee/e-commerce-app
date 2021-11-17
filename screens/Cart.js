@@ -65,7 +65,6 @@ export default function CartList(params) {
               }}
               source={{uri: "https://m.media-amazon.com/images/I/41q-oeBvqiL.jpg"}}
             />
-            />
           </View>
         </View>
 
@@ -92,7 +91,7 @@ export default function CartList(params) {
           </Text>
 
           <Text style={{ textAlign: 'center' }}>
-            <Text style={{ color: 'orange' }}>$</Text>
+            <Text style={{ color: 'green' }}>$</Text>
             <Text style={{ color: 'black', fontWeight: 'bolder' }}>
               50.00
             </Text>
@@ -168,7 +167,7 @@ export default function CartList(params) {
           </Text>
 
           <Text style={{ textAlign: 'center' }}>
-            <Text style={{ color: 'orange' }}>$</Text>
+            <Text style={{ color: 'green' }}>$</Text>
             <Text style={{ color: 'black', fontWeight: 'bolder' }}>
               80.00
             </Text>
@@ -242,7 +241,7 @@ export default function CartList(params) {
             </Text>
 
             <Text style={{ textAlign: 'center' }}>
-              <Text style={{ color: 'orange' }}>$</Text>
+              <Text style={{ color: 'green' }}>$</Text>
               <Text style={{ color: 'black', fontWeight: 'bolder' }}>
                 60.00{' '}
               </Text>{' '}
@@ -278,7 +277,7 @@ export default function CartList(params) {
               Subtotal
             </Text>
             <Text style={{ textAlign: 'center' }}>
-              <Text style={{ color: 'orange', marginLeft: 50 }}>$</Text>
+              <Text style={{ color: 'green', marginLeft: 50 }}>$</Text>
               <Text style={{ color: 'black', fontWeight: 'bolder' }}>
                 190.00
               </Text>
@@ -296,7 +295,7 @@ export default function CartList(params) {
             </Text>
 
             <Text style={{ textAlign: 'center' }}>
-              <Text style={{ color: 'orange', marginLeft: 80 }}>$</Text>
+              <Text style={{ color: 'green', marginLeft: 80 }}>$</Text>
               <Text
                 style={{
                   color: 'black',
@@ -321,7 +320,7 @@ export default function CartList(params) {
             </Text>
 
             <Text style={{ textAlign: 'center' }}>
-              <Text style={{ color: 'orange', marginLeft: 110 }}>$</Text>
+              <Text style={{ color: 'green', marginLeft: 110 }}>$</Text>
               <Text style={{ color: 'black', fontWeight: 'bolder' }}>
                 190.00
               </Text>
@@ -386,7 +385,7 @@ export default function CartList(params) {
             navigation.navigate('cartlist');
           }}>
           <FontAwesome
-            name="shopping-bag"
+            name="shopping-cart"
             size={22}
             style={{ marginRight: 10, color: 'orange' }}
           />
