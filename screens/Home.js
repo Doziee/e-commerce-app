@@ -1,347 +1,523 @@
-import React , { useState }from 'react';
-import {View, Text ,TouchableOpacity, Image, ScrollView} from "react-native";
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
+import React from 'react';
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { Ionicons, FontAwesome, AntDesign,Feather } from '@expo/vector-icons';
 
-
-export default function Home({navigation}){ 
-    return(  
-    <View 
-    style={{
-        backgroundColor: "white",
-        flex:1, 
-        
-       //paddingHorizontal: 20,
-        
-    }}
-    >
-        <ScrollView>
-        
-        <View style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            paddingTop:55,
-            
-        }}>
-          
-        <Ionicons name="ios-menu-outline" size={24} color="black" />
-        <FontAwesome name="book" size={24} color="brown" />
-        <View style= {{flexDirection:"row"}}>
-        <Ionicons name="search" size={24} color="black" />
-        <Ionicons name="notifications-outline" size={24} color="black" />
-        </View>
-        </View>
-
-        <Text style={{ fontSize:15, color:"blue",  paddingTop:15, fontWeight:"500", paddingLeft:15}}>The World's {" "}
-             <Text style={{ color : "red", fontWeight:"bold"}}>Best Book Collection</Text>
-        </Text>
-
-        <Text style={{paddingTop:15, fontWeight:"bold", paddingLeft:25, color: "brown"}}>Genres</Text>
-        
-        <View style= {{flexDirection:"row"}}>
-            
-
-        <TouchableOpacity
-        
-           style={{ 
-            backgroundColor : "#eee",
-            marginRight:10,
-             padding:10,
-             borderRadius: 10,
-             marginTop:20,
-             marginLeft:20,
-             }}
-        >
-            <Text style={{ color: "orange" , alignItems:"center",fontWeight:"bold" }}>All</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-            style={{ 
-                backgroundColor : "#eee",
-                marginRight:10,
-                 padding:10,
-                 borderRadius: 10,
-                 marginTop:20 
-                 }}
-        >
-            <Text style={{alignItems:"center", color: "red"}}>Romance</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-           style={{ 
-               backgroundColor : "#eee",
-               marginRight:10,
-                padding:10,
-                borderRadius: 10,
-                marginTop:20 
-                }}
-        >
-     <Text style={{ alignItems:"center", color: "red" }}>Science</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-           style={{ 
-               backgroundColor : "#eee",
-               marginRight:10,
-                padding:10,
-                borderRadius: 10,
-                marginTop:20 
-                }}
-        >
-     <Text style={{ alignItems:"center", color: "red" }}>Life</Text>
-        </TouchableOpacity>
-
-        </View>
-         
-         
-         <View style= {{flexDirection:"row"}}>
-
-        <TouchableOpacity style={{
-          marginTop:30,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:250,
-           width:150,
-           elevation:2,
-           borderRadius:30,
-           borderStyle:"solid",
-           borderWidth: 1,
-           padding:15,
-           marginRight:30,
-           marginLeft:25,
-           marginBottom:5
+export default function Home({navigation}) {
+  return (
+    <ScrollView
+      style={{
+        backgroundColor: 'lightblue',
+        flex: 1,
+        paddingTop: 55,
+        paddingHorizontal: 20,
       }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5}}
-          name="heart-circle" size={24} color="brown" />
-        <Image
-         style={{
-            marginTop:1,
-            width: 140,
-            height: 120,
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/The girl in red.jpg')} 
-        />
-        <Text style={{ 
 
-            color: 'lightblue',
-        }}>
-        The Girl In Red</Text>
-        <Text style={{ 
-            color:"red",
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 500.00</Text></Text>
-
-        </TouchableOpacity>
-
-        <TouchableOpacity style={{
-          marginTop:30,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:250,
-           width:150,
-           elevation:2,
-           borderRadius:30,
-           borderStyle:"solid",
-           borderWidth: 1,
-           padding:15,
-           marginRight:30,
-           marginLeft:2,
-           marginBottom:5
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5}}
-          name="heart-circle" size={24} color="black" />
-        <Image
-         style={{
-            marginTop:1,
-            width: 140,
-            height: 120,
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/Sing to it.jpg')} 
-        />
-        <Text style={{ 
-            
-            color: 'lightblue',
-        }}>
-        Sing To It</Text>
-        <Text style={{ 
-            color:"red",
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 450.00</Text></Text>
-
-        </TouchableOpacity>
-        </View>
-        <View style= {{flexDirection:"row"}}>
-        <TouchableOpacity style={{
-          marginTop:5,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:250,
-           width:150,
-           elevation:2,
-           borderRadius:30,
-           borderStyle:"solid",
-           borderWidth: 1,
-           padding:15,
-           marginRight:30,
-           marginLeft:25,
-           marginBottom:5
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5}}
-          name="heart-circle" size={24} color="black" />
-        <Image
-         style={{
-            marginTop:-8,
-            width: 140,
-            height: 160,
-            borderRadius: 20,
-            
-            
-           
-        }}
-        source={require('./images/no place like here.jpg')} 
-        />
-        <Text style={{ 
-
-            color: 'lightblue',
-        }}>
-         No Place Like Here</Text>
-        <Text style={{ 
-            color:"red",
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 350.00</Text></Text>
-
-        </TouchableOpacity>
-
-        <TouchableOpacity style={{
-          marginTop:5,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:250,
-           width:150,
-           elevation:2,
-           borderRadius:30,
-           borderStyle:"solid",
-           borderWidth: 1,
-           padding:15,
-           marginRight:30,
-           marginLeft:2,
-           marginBottom:5
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5}}
-          name="heart-circle" size={24} color="black" />
-        <Image
-         style={{
-            marginTop:1,
-            width: 140,
-            height: 120,
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/Memory.jpg')} 
-        />
-        <Text style={{ 
-            
-            color: 'lightblue',
-        }}>
-        Memory</Text>
-        <Text style={{ 
-            color:"red",
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 700.00</Text></Text>
-
-        </TouchableOpacity>
-        </View>
-        
-        </ScrollView>
-        
-        
-        <View style={{
-            flexDirection: "row",
-            backgroundColor: "#eee",
-            height: 50,
-            width: "100%",
-            justifyContent:"space-between"
-            
-        }}
-        
-        
-        >
-            <Entypo style ={{ 
-                paddingLeft:50,
-                paddingTop:15, 
-
-            }}
-            name="home" size={26} color="brown" />
-
-
-              
-              <TouchableOpacity
-              onPress={() => {
-                navigation.navigate("Cart list")
-            }}
-            activeOpacity={0.8}>
-              
-              <Feather
-              style ={{ 
-                paddingRight:50,
-                paddingTop:15,
-                
-                
-            }}
-        
-             name="shopping-cart" size={24} color="brown" /></TouchableOpacity>
-             <View
+      <View
         style={{
-            justifyContent:"center",
-            alignItems: "center",
-            position:"absolute",
-            paddingLeft:385
-            
-            
-        }}
-        >
-        <Ionicons
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+
+        <TouchableOpacity
+        onPress={()=>{navigation.navigate("Menu")}}>
+        <Ionicons name="ios-menu-outline" size={24} color="brown" />
+        </TouchableOpacity>
+        
+        
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <TouchableOpacity 
+          onPress={()=>{navigation.navigate("Cart")}}>
+          <Feather name="shopping-bag" size={20} color="brown" />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+          <Ionicons
+            style={{ marginLeft: 15 }}
+            name="notifications-outline"
+            size={20}
+            color="brown"
+          />
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      <TouchableOpacity style={{backgroundColor:'white', marginTop:20, borderRadius:30, padding:12}}>
+      
+        <AntDesign name="search1" size={20} color="purple"  /> 
+        
+        </TouchableOpacity>
+
+
+      <Text style=
+      {{ fontWeight: '700',
+       marginTop: 20,
+       marginBottom: 20,
+       color:'brown',
+       fontSize: 20,
+       textAlign: 'center'
+      }}>Archives</Text>
+
+
+
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View
+          style={{
+            backgroundColor: 'white',
+            padding: 10,
+            paddingHorizontal: 15,
+            borderRadius: 12,
+          }}>
+          <TouchableOpacity>
+            <Text style={{
+               color: 'brown'
+             }}>
+             All</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View
+          style={{ backgroundColor: 'white', padding: 10, borderRadius: 12 }}>
+          <TouchableOpacity>
+            <Text style={{ 
+              color: 'brown'
+               }}>Life</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View
+          style={{ backgroundColor: 'white', padding: 10, borderRadius: 12 }}>
+          <TouchableOpacity>
+            <Text style={{ color: 'brown' }}>Romance</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View
+          style={{ backgroundColor: 'white', padding: 10, borderRadius: 12,}}>
+          <TouchableOpacity>
+            <Text style={{ color: 'brown' }}>Science</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+
+
+      <View
+        style={{
+          marginTop: 20,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <View style={{ flexDirection: 'column', marginVertical: 10 }}>
+
+
+         <View style={{flexDirection:"row", justifyContent:"space-between"}}>
+          <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://m.media-amazon.com/images/I/41q-oeBvqiL.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
                   style={{
-                    
-                    position:"absolute",
-                    
-                }}
-        
-        name="md-mic-circle-sharp" size={50} color="red" />
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              The book of life
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              50
+            </Text>
+          </View>
+
+           
+           <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+              
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://cdn.lifehack.org/wp-content/uploads/2015/06/to-be-told.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              To be told
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              80
+            </Text>
+          </View>
+
+          </View>
+         
+
+
+           <View style={{flexDirection:"row", justifyContent:"space-between"}}>
+           <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://i1.wp.com/betterlifethoughts.com/wp-content/uploads/2020/05/Life-changing-Books-6.jpg?fit=400%2C600&ssl=1"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              MindSet
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              60
+            </Text>
+          </View>
+          
+           
+           <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1626719638l/57924373.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              Sapiens
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              32
+            </Text>
+
+          </View>
+          </View>
+          
+
+          <View style={{flexDirection:"row", justifyContent:"space-between"}}>
+          <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://images-na.ssl-images-amazon.com/images/I/51LIiMpgh6L._SX329_BO1,204,203,200_.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              TILFD
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              70
+            </Text>
+          </View>
+
+           
+           <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+              
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1614664695l/57007911.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              SEX
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              90
+            </Text>
+          </View>
+          </View>
+          </View>
+
+
+           
+          <View style={{flexDirection:"row", justifyContent:"space-between"}}>          
+          <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1549386187-51y1omNT91L.jpg?crop=1.00xw:0.972xh;0,0.0100xh&resize=480:*"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              Gone with Wind
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              15
+            </Text>
+          </View>
+
+           
+           <View
+            style={{
+              backgroundColor: 'white',
+              width: 150,
+              height: 280,
+              borderRadius: 15,
+              padding: 15,
+              margin: 10,
+              
+            }}>
+            <Image
+              style={{ height: 150, width: 110, alignSelf: 'center',borderRadius: 15, }}
+              source={{uri: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611937942l/56732449.jpg"}}
+            />
+            <View
+              style={{
+                marginTop: 15,
+                backgroundColor: '#ffb266',
+                alignSelf: 'center',
+                borderRadius: 10,
+                paddingVertical: 5,
+                paddingHorizontal: 20,
+              }}>
+              <TouchableOpacity>
+                <Text
+                  style={{
+                    color: 'brown',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  Add to Cart
+                  <Feather style={{marginLeft:5}}
+                  name="shopping-bag"
+                  size={20} 
+                  color="brown" 
+                 />
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <Text style={{ color: '#828080', textAlign: 'center' }}>
+              TLH
+            </Text>
+            <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
+              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              100
+            </Text>
+          </View>
+
+          
         </View>
-
-            
-        </View>
-        
-
-        </View>
-        
-
-       
-    )
-
-    
+      </View>
+    </ScrollView>
+  );
 }

@@ -1,512 +1,405 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity, FlatList } from "react-native";
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
+import {
+  View,
+  Text,
+  Button,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+ 
+} from 'react-native';
+import { Ionicons, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+export default function CartList(params) {
+  const navigation = params.navigation;
+  return (
+
+    <View style={{ backgroundColor: 'white', paddingHorizontal: 20 }}>
+      <View style={{ flexDirection: 'row', marginTop: 30 }}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('PopularProducts');
+          }}>
+          <Ionicons name="arrow-back" size={20} style={{ marginLeft: 15 }} />
+        </TouchableOpacity>
 
 
-export default function Cart({navigation}){
-    return(
+        <Text style={{ marginLeft: 80, fontWeight: 'bolder' }}>Cart list</Text>
+      </View>
+
+
+
+      <View>
+        <Text style={{ marginLeft: 117 }}>(3 items)</Text>
+      </View>
+
+
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+
+          borderRadius: 10,
+          padding: 2,
+          marginTop: 3,
+        }}>
         <View
-        style={{ flex:1, backgroundColor: "white", }}
-        
-        >
-            
-            <Text style={{
-                paddingTop:55,
-                paddingLeft:150,
-                fontWeight: 'bold',
-            }}> Cart list</Text>
-            <Text style={{
-                color: 'grey',
-                paddingLeft:150,
-                
-            }}>(3 books)</Text>
+          style={{
+            borderRadius: 10,
+            width: 150,
+            height: 'auto',
+            backgroundColor: 'rgb(240, 241, 242)',
+            marginTop: 3,
+            padding: 5,
+          }}>
+          <View>
+            <Image
+              style={{
+                width: 130,
+                marginTop: 7,
 
-            
-             <View
-             style={{
-                 paddingBottom:60,
-                 flexDirection:"row",
-                 height:100,
-                 elevation:15,
-                 borderRadius:10,
-                 marginVertical: 10,
-                 marginHorizontal: 20,
-                 paddingHorizontal:10,
-                 alignItems:"center",
-                 marginTop:50
+                height: 100,
+                resizeMode: 'stretch',
+              }}
+              source={{uri: "https://m.media-amazon.com/images/I/41q-oeBvqiL.jpg"}}
+            />
+            />
+          </View>
+        </View>
 
-            }}>
-             <TouchableOpacity style={{
-          marginTop:2,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:90,
-           width:90,
-           borderRadius:30,
-           borderWidth: 1,
-           marginRight:12,
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
-          name="heart-circle" size={24} color="brown" />
-        <Image
-         style={{
-            
-            width: 60,
-            height: 55,
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/The girl in red.jpg')} 
-        />
-        </TouchableOpacity>
+
+
+
 
         <View>
-            <View
+          <Text
             style={{
-                flexDirection: "row",
+              color: 'black',
+              textAlign: 'center',
+              fontWeight: 'bolder',
             }}>
-            
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:15,
-                fontWeight:"bold",
-                color: "lightblue"
-            }}>The Girl In Red
-
-            </Text>
-
-            <EvilIcons style={{
-                 marginLeft:65,
-            }}
-        name="trash" size={28} color="red"  />
-
-            </View >
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:10,
-                fontWeight:"bold",
-                color:"grey"
+           TBOL
+          </Text>
+          <Text
+            style={{
+              color: 'rgb(174, 175, 176)',
+              textAlign: 'center',
+              fontWeight: 'bolder',
             }}>
-               Genre: Romance
+            Science
+          </Text>
+
+          <Text style={{ textAlign: 'center' }}>
+            <Text style={{ color: 'orange' }}>$</Text>
+            <Text style={{ color: 'black', fontWeight: 'bolder' }}>
+              50.00
             </Text>
-            <View style= {{flexDirection:"row"}}>
-            <Text style={{ 
-            color:"red",
-            fontWeight:"bold",
-            marginLeft:10, 
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 500.00</Text></Text>
+          </Text>
+        </View>
 
-        <AntDesign 
+        <Ionicons name="remove-circle" size={20} />
+        <Text>1</Text>
+        <Ionicons name="add-circle" size={20} color="orange" />
+      </View>
 
+
+
+
+
+      <View
         style={{
-            marginLeft:50,
-            paddingBottom:5
-        }}
-    
-        name="minuscircle" size={28} color="red" />
+          flexDirection: 'row',
 
-        <Text
-         style={{
-             fontWeight:"bold",
-            //marginLeft:20
-        }}
-        >   1   </Text>
-        <AntDesign name="pluscircle" size={28} color="green" />
-        </View>
+          alignItems: 'center',
+          justifyContent: 'space-between',
 
-        </View>
+          borderRadius: 10,
+          padding: 5,
 
-                 </View>
-
-                 <View
-             style={{
-                 flexDirection:"row",
-                 paddingBottom:20,
-                 marginHorizontal: 20,
-                 paddingHorizontal:10,
-
-            }}>
-             <TouchableOpacity style={{
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:100,
-           width:95,
-           borderRadius:30,
-           borderWidth: 1,
-           paddingBottom:70,
-           marginRight:12,
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
-          name="heart-circle" size={24} color="black" />
-        <Image
-         style={{
-            
-            width: 60,
-            height: 65,
-           
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/no place like here.jpg')} 
-        />
-        </TouchableOpacity>
-
+          marginTop: 5,
+        }}>
         <View>
-            <View
+          <View
             style={{
-                flexDirection: "row",
+              borderRadius: 10,
+              width: 150,
+              height: 'auto',
+              backgroundColor: 'rgb(240, 241, 242)',
+              marginTop: 5,
+              padding: 5,
             }}>
-            
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:15,
-                fontWeight:"bold",
-                color: "lightblue"
-            }}>No Place Like Here
+            <View>
+              <Image
+                style={{
+                  width: 90,
+                  marginTop: 15,
+                  
 
-            </Text>
-
-            <EvilIcons style={{
-                 marginLeft:40,
-            }}
-        name="trash" size={28} color="red"  />
-
-            </View >
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:10,
-                fontWeight:"bold",
-                color:"grey"
-            }}>
-                Genre: Science
-            </Text>
-            <View style= {{flexDirection:"row"}}>
-            <Text style={{ 
-            color:"red",
-            fontWeight:"bold",
-            marginLeft:10, 
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 350.00</Text></Text>
-
-        <AntDesign 
-
-        style={{
-            marginLeft:50,
-            paddingBottom:5
-        }}
-    
-        name="minuscircle" size={28} color="red" />
-
-        <Text
-         style={{
-             fontWeight:"bold",
-        }}
-        >  1  </Text>
-        <AntDesign name="pluscircle" size={28} color="green" />
-        </View>
-
-        </View>
-
-                 </View>
-                 <View
-             style={{
-                 
-                 flexDirection:"row",
-                 marginHorizontal: 20,
-                 paddingHorizontal:10,
-                 
-                 
-
-            }}>
-             <TouchableOpacity style={{
-
-           marginTop:2,
-           alignItems:"center",
-           backgroundColor: "#fff",
-           height:90,
-           width:90,
-           borderRadius:30,
-           borderWidth: 1,
-           marginRight:12,
-      }}>
-          <Ionicons style={{alignSelf:"flex-end", marginBottom:5, marginRight:10}}
-          name="heart-circle" size={24} color="black" />
-        <Image
-         style={{
-            
-            width: 60,
-            height: 55,
-            borderRadius: 20,
-            marginBottom: 25,
-           
-        }}
-        source={require('./images/Memory.jpg')} 
-        />
-        </TouchableOpacity>
-
-        <View>
-            <View
-            style={{
-                flexDirection: "row",
-            }}>
-            
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:15,
-                fontWeight:"bold",
-                color: "lightblue"
-            }}>Memory 
-
-            </Text>
-
-            <EvilIcons style={{
-                 marginLeft:110,
-            }}
-        name="trash" size={28} color="red"  />
-
-            </View >
-            <Text style={{
-                marginLeft:10, 
-                marginBottom:10,
-                fontWeight:"bold",
-                color:"grey"
-            }}>
-            Genre: Life
-            </Text>
-            <View style= {{flexDirection:"row"}}>
-            <Text style={{ 
-            color:"red",
-            fontWeight:"bold",
-            marginLeft:10, 
-            fontWeight:"bold"
-        }}
-        >$<Text style={{
-            color:"black",
-            fontWeight: "bold"
-        }}> 700.00</Text></Text>
-
-        <AntDesign 
-
-        style={{
-            marginLeft:50,
-            paddingBottom:5
-        }}
-    
-        name="minuscircle" size={28} color="red" />
-
-        <Text
-         style={{
-             fontWeight:"bold",
-        }}
-        >   1   </Text>
-        <AntDesign name="pluscircle" size={28} color="green" />
-        </View>
-
-        </View>
-
-                 </View>
-
-                 <View
-                 style={{
-                    marginTop:25,
-                    backgroundColor: "#eee",
-                    height:150,
-                    width: "100%",
-                    borderRadius:30,
-                    
-                     
-                 }}
-                 
-                 >
-                     <View
-                     style={{
-                        
-                        flexDirection: "row",
-                        
-                         
-                     }}
-                     >
-
-<Text
-                     style={{ 
-                        color:"grey",
-                        paddingTop:15,
-                        paddingLeft:10,
-                           }}
-                     
-                     > Subtotal</Text>
-                     <Text style={{ 
-                       color:"red",
-                       fontWeight:"bold",
-                       paddingLeft:163,
-                       paddingTop:15,
-                          }}
-                    >$<Text style={{
-                       color:"black",
-                         fontWeight: "bold",
-                         
-                     }}> 1,550.00</Text></Text>
-                     
-                     </View>
-
-                     <View style={{flexDirection:"row"}}>
-                     <Text
-                     style={{ 
-                        color:"grey",
-                        paddingTop:15,
-                        paddingLeft:10,
-                           }}
-                     
-                     > Shipping Fee</Text>
-                     <Text style={{ 
-                       color:"red",
-                       fontWeight:"bold",
-                       paddingLeft:135,
-                       paddingTop:15,
-                          }}
-                    >$<Text style={{
-                       color:"black",
-                         fontWeight: "bold",
-                         
-                     }}> 34.00</Text></Text>
-                     
-                     </View>
-                     
-                     <Text
-
-                     style={{
-                         color:"grey",
-                     }}
-                     
-                     > ------------------------------------------------</Text>
-
-                     <View style= {{flexDirection:"row"}}>
-                     <Text
-                     style={{ 
-                        fontWeight:"bold",
-                        paddingTop:15,
-                        paddingLeft:10,
-                           }}
-                     
-                     > Total</Text>
-                     <Text style={{ 
-                       color:"red",
-                       fontWeight:"bold",
-                       paddingLeft:183,
-                       paddingTop:15,
-                          }}
-                    >$<Text style={{
-                       color:"black",
-                         fontWeight: "bold",
-                         
-                     }}> 1,584.00</Text></Text>
-                     
-                     </View>
-
-                 </View>
-                 
-
-                 <View
-                 style={{
-                    marginTop:30,
-                    backgroundColor: "green",
-                    height:50,
-                    width: "100%",
-                    borderRadius:30,
-                    alignItems:"center",
-                    
-                     
-                 }}>
-                     <TouchableOpacity>
-                     <Text
-                     style={{
-                        marginTop:15,
-                        fontSize:15,
-                        fontWeight:"bold",
-                        color: "#fff",
-                        
-                         
-                     }}
-                     > Proceed to checkout</Text>
-                     </TouchableOpacity>
-                     
-                     
-
-                 </View>
-                 <View style={{
-            flexDirection: "row",
-            backgroundColor: "#eee",
-            height: 50,
-            width: "100%",
-            justifyContent:"space-between",
-            marginTop:35
-            
-        }}    
-        >
-            <TouchableOpacity
-            onPress={() => {
-                navigation.navigate("Home")
-            }}
-            activeOpacity={0.8}>
-
-            <Entypo style ={{ 
-                paddingLeft:50,
-                paddingTop:15, 
-
-            }}
-            name="home" size={26} color="brown" />
-            </TouchableOpacity>
-              
-              
-              <Feather
-              style ={{ 
-                paddingRight:50,
-                paddingTop:15,
-                
-                
-            }}
-        
-             name="shopping-bag" size={24} color="brown" />
-             <View
-        style={{
-            justifyContent:"center",
-            alignItems: "center",
-            position:"absolute",
-            paddingLeft:385
-            
-            
-        }}
-        >
-        <Ionicons
-                  style={{
-                    
-                    position:"absolute",
-                    
+                  height: 100,
+                  resizeMode: 'stretch',
                 }}
-        
-        name="md-mic-circle-sharp" size={50} color="red" />
+                source={{uri: "https://cdn.lifehack.org/wp-content/uploads/2015/06/to-be-told.jpg"}}
+              />
+            </View>
+          </View>
         </View>
 
-            
-        </View>
-        
+
+
+
+        <View>
+          <Text
+            style={{
+              color: 'black',
+              textAlign: 'center',
+              fontWeight: 'bolder',
+            }}>
+            To be told
+          </Text>
+          <Text
+            style={{
+              color: 'rgb(174, 175, 176)',
+              textAlign: 'center',
+              fontWeight: 'bolder',
+            }}>
+            Life
+          </Text>
+
+          <Text style={{ textAlign: 'center' }}>
+            <Text style={{ color: 'orange' }}>$</Text>
+            <Text style={{ color: 'black', fontWeight: 'bolder' }}>
+              80.00
+            </Text>
+          </Text>
         </View>
 
+
+<Ionicons name="remove-circle" size={20} />
+        <Text>1</Text>
+        <Ionicons name="add-circle" size={20} color="orange" />
+      </View>
+
+
+
+
+      <View>
+        <View
+          style={{
+            flexDirection: 'row',
+
+            alignItems: 'center',
+
+            borderRadius: 10,
+            padding: 5,
+            marginTop: 5,
+          }}>
+          <View
+            style={{
+              borderRadius: 10,
+              width: 150,
+              height: 'auto',
+              backgroundColor: 'rgb(240, 241, 242)',
+              marginTop: 3,
+              padding: 5,
+            }}>
+            <View>
+              <Image
+                style={{
+                  width: 130,
+                  marginTop: 15,
+
+                  height: 100,
+                  resizeMode: 'stretch',
+                }}
+                source={{uri: "https://i1.wp.com/betterlifethoughts.com/wp-content/uploads/2020/05/Life-changing-Books-6.jpg?fit=400%2C600&ssl=1"}}
+              />
+            </View>
+          </View>
+
+
+
+
+          <View>
+            <Text
+              style={{
+                color: 'black',
+                textAlign: 'center',
+                fontWeight: 'bolder',
+              }}>
+              Mindset
+            </Text>
+
+            <Text
+              style={{
+                color: 'rgb(174, 175, 176)',
+                textAlign: 'center',
+                fontWeight: 'bolder',
+                marginLeft: 5,
+              }}>
+             Science
+            </Text>
+
+            <Text style={{ textAlign: 'center' }}>
+              <Text style={{ color: 'orange' }}>$</Text>
+              <Text style={{ color: 'black', fontWeight: 'bolder' }}>
+                60.00{' '}
+              </Text>{' '}
+            </Text>
+          </View>
+          <Ionicons name="remove-circle" size={20} />
+          <Text>1</Text>
+          <Ionicons name="add-circle" size={20} color="orange" />
+        </View>
+      </View>
+
+
+
+
+
+      <View>
+        <View
+          style={{
+            width: 'auto',
+            height: 'auto',
+            backgroundColor: 'rgb(rgb(240, 241, 242)',
+            borderRadius: 15,
+            padding: 10,
+            marginTop: 15,
+          }}>
+          <Text>
+            <Text
+              style={{
+                color: 'rgb(174, 175, 176)',
+                textAlign: 'center',
+                fontWeight: 'bolder',
+              }}>
+              Subtotal
+            </Text>
+            <Text style={{ textAlign: 'center' }}>
+              <Text style={{ color: 'orange', marginLeft: 50 }}>$</Text>
+              <Text style={{ color: 'black', fontWeight: 'bolder' }}>
+                190.00
+              </Text>
+            </Text>
+          </Text>
+
+          <Text>
+            <Text
+              style={{
+                color: 'rgb(174, 175, 176)',
+                textAlign: 'center',
+                fontWeight: 'bolder',
+              }}>
+              Shipping fee
+            </Text>
+
+            <Text style={{ textAlign: 'center' }}>
+              <Text style={{ color: 'orange', marginLeft: 80 }}>$</Text>
+              <Text
+                style={{
+                  color: 'black',
+                  fontWeight: 'bolder',
+                  marginLeft: 100,
+                }}>
+                190.00
+              </Text>
+            </Text>
+          </Text>
+
+          <Text>------------------------------------------</Text>
+
+          <Text>
+            <Text
+              style={{
+                color: 'black',
+                textAlign: 'center',
+                fontWeight: 'bolder',
+              }}>
+              Total
+            </Text>
+
+            <Text style={{ textAlign: 'center' }}>
+              <Text style={{ color: 'orange', marginLeft: 110 }}>$</Text>
+              <Text style={{ color: 'black', fontWeight: 'bolder' }}>
+                190.00
+              </Text>
+            </Text>
+          </Text>
+        </View>
+      </View>
+
+
+<TouchableOpacity
+        style={{
+          padding: 10,
+          paddingHorizontal: 80,
+          marginTop: 10,
+          alignItems: 'center',
+          borderRadius: 10,
+          flexDirection: 'row',
+          backgroundColor: 'orange',
+        }}>
+        <Text style={{ fontWeight: 'bolder', color: 'white' }}>
+          Proceed to Checkout
+        </Text>
+      </TouchableOpacity>
+
+
+
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginTop: 10,
+          marginBottom: 10,
+        }}>
+
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Home');
+          }}>
+          <Ionicons name="home" size={26} style={{ marginLeft: 10 }} />
+        </TouchableOpacity>
+
+       
+       
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Login');
+          }}>
+          <Image
+           source={{uri: "https://media.istockphoto.com/photos/blue-book-picture-id1281955543?b=1&k=20&m=1281955543&s=170667a&w=0&h=ZmwacrjQewEU3RqJLYufA-Bi7JVOI2JgcB8X0o7vPeI="}}
+            style={{ width: 28, height: 28 }}
+          />
+        </TouchableOpacity>
+
+
+
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('cartlist');
+          }}>
+          <FontAwesome
+            name="shopping-bag"
+            size={22}
+            style={{ marginRight: 10, color: 'orange' }}
+          />
+        </TouchableOpacity>
+
         
-    )
+
+        <TouchableOpacity>
+          <FontAwesome name="comments-o" size={28} style={{}} />
+        </TouchableOpacity>
+
+
+      </View>
+    </View>
+  );
 }
