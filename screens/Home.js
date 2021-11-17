@@ -28,7 +28,7 @@ export default function Home({navigation}) {
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <TouchableOpacity 
           onPress={()=>{navigation.navigate("Cart")}}>
-          <Feather name="shopping-bag" size={20} color="brown" />
+          <Feather name="shopping-cart" size={20} color="brown" />
           </TouchableOpacity>
 
           <TouchableOpacity>
@@ -44,7 +44,7 @@ export default function Home({navigation}) {
 
       <TouchableOpacity style={{backgroundColor:'white', marginTop:20, borderRadius:30, padding:12}}>
       
-        <AntDesign name="search1" size={20} color="purple"  /> 
+        <AntDesign name="search1" size={20} color="brown"  /> 
         
         </TouchableOpacity>
 
@@ -128,7 +128,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -143,7 +143,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -154,7 +154,7 @@ export default function Home({navigation}) {
               The book of life
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               50
             </Text>
           </View>
@@ -177,7 +177,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -192,7 +192,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -205,7 +205,7 @@ export default function Home({navigation}) {
               To be told
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               80
             </Text>
           </View>
@@ -231,7 +231,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -246,7 +246,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -258,7 +258,7 @@ export default function Home({navigation}) {
               MindSet
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               60
             </Text>
           </View>
@@ -280,7 +280,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -295,7 +295,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -307,7 +307,7 @@ export default function Home({navigation}) {
               Sapiens
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               32
             </Text>
 
@@ -332,7 +332,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -347,7 +347,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -358,7 +358,7 @@ export default function Home({navigation}) {
               TILFD
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               70
             </Text>
           </View>
@@ -381,7 +381,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -396,7 +396,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -408,7 +408,7 @@ export default function Home({navigation}) {
               SEX
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               90
             </Text>
           </View>
@@ -434,7 +434,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -449,7 +449,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -457,10 +457,10 @@ export default function Home({navigation}) {
               </TouchableOpacity>
             </View>
             <Text style={{ color: '#828080', textAlign: 'center' }}>
-              Gone with Wind
+              Gone with the Wind
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               15
             </Text>
           </View>
@@ -483,7 +483,7 @@ export default function Home({navigation}) {
             <View
               style={{
                 marginTop: 15,
-                backgroundColor: '#ffb266',
+                backgroundColor: 'lightblue',
                 alignSelf: 'center',
                 borderRadius: 10,
                 paddingVertical: 5,
@@ -498,7 +498,7 @@ export default function Home({navigation}) {
                   }}>
                   Add to Cart
                   <Feather style={{marginLeft:5}}
-                  name="shopping-bag"
+                  name="shopping-cart"
                   size={20} 
                   color="brown" 
                  />
@@ -510,7 +510,7 @@ export default function Home({navigation}) {
               TLH
             </Text>
             <Text style={{ fontWeight: 'bolder', textAlign: 'center' }}>
-              <Text style={{ color: 'orange', textAlign: 'center' }}>$</Text>{' '}
+              <Text style={{ color: 'green', textAlign: 'center' }}>$</Text>{' '}
               100
             </Text>
           </View>
